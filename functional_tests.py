@@ -25,7 +25,7 @@ class NewVisitorTest(unittest.TestCase):
         )
         inputbox.send_keys('Buy peacock feathers')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
+        time.sleep(3)
 
         self.assertIn('To-Do', header_text)
         # self.fail('Finish the test')
@@ -35,7 +35,7 @@ class NewVisitorTest(unittest.TestCase):
         rows = table.find_elements_by_tag_name('tr')
         self.assertTrue(
             any(row.text == '1: Buy peacock feathers' for row in rows),
-            "New to-do item did not appear in table"
+            f"New to-do item did not appear in table. Contents were:\n{table.text}"
         )
 
 if __name__ == '__main__':
