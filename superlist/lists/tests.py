@@ -30,7 +30,7 @@ class ItemModelTest(TestCase):
 
     def test_saving_and_retrieving_items(self):
         first_item = Item()
-        first_item.text = 'the first (ever) list item'
+        first_item.text = 'The first (ever) list item'
         first_item.save()
 
         second_item = Item()
