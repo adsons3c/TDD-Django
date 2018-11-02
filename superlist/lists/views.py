@@ -6,7 +6,7 @@ from django.http import HttpResponse
 def home_page(request):
     if request.method == "POST":
         Item.objects.create(text=request.POST['item_text'])
-        return redirect('/')
+        return redirect('/lists/the-only-list-in-the-world/')
         # new_item_text = request.POST['item_text']
         # Item.objects.create(text=new_item_text)
 
